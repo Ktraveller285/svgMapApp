@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:go="http://purl.org/svgmap/profile" viewBox="123 -46 22 22">
+  <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(1.0,0.0,0.0,-1.0,0.0,0.0)"/>
+  <!-- Basemap Layers -->
+  <animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/dynamicWMTS.svg" title="sentinel2_2018_WMTS" class="basemap switch" visibility="hidden"/>
+  <animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/dynamicDenshiKokudo2016.svg#map=ort" title="DenshiKokudo:orthoPhoto" class="basemap switch" visibility="hidden"/>
+  <animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/dynamicDenshiKokudo2016.svg#map=pale" title="DenshiKokudo:淡色" class="basemap switch" visibility="hidden"/>
+  <animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/dynamicDenshiKokudo2016.svg#map=relief" title="DenshiKokudo:relief" class="basemap switch" visibility="hidden"/>
+  <animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/dynamicDenshiKokudo2016.svg" title="DenshiKokudo" class="basemap switch" visibility="hidden"/>
+  <animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/osmTileProviders/osmtp.svg" title="OpenStreetMap Etc" class="basemap switch" visibility="hidden"/>
+  <animation x="-300" y="-300" width="600" height="600" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/dynamicOSM_r11.svg" title="OpenStreetMap(Global)" class="basemap switch" visibility="visible"/>
+  <!-- vectorEtcData -->
+  <!-- ジオコーダー的なもののグループ -->
+  <!-- csisGeocode.svg#jageocoderEndpoint=[JageocoderEndpointURLwithQueryPart] とすることでJageocoderを使用します-->
+  <!-- GIS的なもののグループ -->
+  <!-- オーサリングツール的なもののグループ -->
+  <!-- 災害情報系 -->
+  <!-- 海洋情報系 -->
+  <!-- 海しる系 -->
+  <!-- others gov layers -->
+  <!-- その他 ハザードマップ -->
+  <!-- 国交省道路情報 -->
+  <!-- 国土地理院 -->
+  <!-- 国交省ハザードマップレイヤー群 -->
+  <!-- 地震火山レイヤー群 -->
+  <!-- 気象レイヤー群 -->
+  <!-- 国交省川の防災情報(ライブカメラ以外) -->
+  <!-- ライブカメラ -->
+  <!-- その他政府/民間 アプリレイヤー -->
+  <!--
+  <animation xlink:href="./authoringLayers/local/csvLayer/multiCsvView.svg" title="保存済み複数CSVデータ表示" x="-30000" y="-30000" width="60000" height="60000" class="poi" opacity="0.75" visibility="hidden"/>
+  -->
+  <!-- #HOSPITAL など大文字でカテゴリ名入れるとカテゴリ固定レイヤ化可能-->
+</svg>
