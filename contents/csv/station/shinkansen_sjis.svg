@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:go="http://purl.org/svgmap/profile" viewBox="9000.0 -4500.0 9000.0 4500.0" go:dataArea="9000.0 -4500.0 9000.0 4500.0" >
+<!--  参考データです -->
+<!-- Tramsform:[100.0,0.0,0.0,-100.0,0.0,0.0] -->
+<!-- 基準緯線:0.0 -->
+<!-- Bounds:ReferencedEnvelope[134.47386789288515 : 136.29092363606188, 34.667255066468144 : 35.3151549338] DefaultGeographicCRS[WGS84(DD)] AXIS["Geodetic longitude", EAST] AXIS["Geodetic latitude", NORTH] -->
+<!-- TypeName:shinkansen_sjis -->
+<!-- Count:7 -->
+<!-- NS:shinkansen_sjis -->
+<!-- Geom:GeometryDescriptorImpl the_geom <the_geom:Point> nillable 0:1 -->
+<!-- attrNo:0 Name:the_geom type:Point -->
+<!-- attrNo:1 Name:駅名 type:String -->
+<!-- attrNo:2 Name:よみ type:String -->
+<!-- attrNo:3 Name:会社 type:String -->
+<!-- attrNo:4 Name:路線1 type:String -->
+<!-- attrNo:5 Name:路線2 type:String -->
+<!-- attrNo:6 Name:所在地 type:String -->
+<!-- OriginalDatum:JGD2000 -->
+<!-- OriginalCrd:LatLon -->
+<!-- defMainColor:green -->
+<!-- outlineColor: -->
+<!-- mainColorCol:-1 -->
+<!-- outLineColorCol:-1 -->
+<!-- POIsizeCol:-1 -->
+<!-- captionCol:-1 -->
+<!-- dupCheckCol:-1 -->
+<!-- linkCol:-1 -->
+<metadata>
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:crs="http://opengis.org/xmldtds/transformations.dtd" xmlns:svg="http://www.w3.org/svg" >
+  <rdf:Description>
+   <crs:CoordinateReferenceSystem rdf:resource="http://purl.org/crs/84" svg:transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+  </rdf:Description>
+ </rdf:RDF>
+</metadata>
+<globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+<!-- Total:7 records. -->
+<!-- LEVEL: 0 -->
+<animation xlink:href="shinkansen_sjis_0-0.svg" x="9000" y="-4500" width="4500" height="4500" visibleMinZoom="8.88"/>
+<image xlink:href="shinkansen_sjis/lvl3/tile0_0.png" preserveAspectRatio="none" x="9000" y="-4500" width="4500" height="4500" visibleMaxZoom="8.88"/>
+<animation xlink:href="shinkansen_sjis_1-0.svg" x="13500" y="-4500" width="4500" height="4500" visibleMinZoom="8.88"/>
+<image xlink:href="shinkansen_sjis/lvl3/tile1_0.png" preserveAspectRatio="none" x="13500" y="-4500" width="4500" height="4500" visibleMaxZoom="8.88"/>
+</svg>
