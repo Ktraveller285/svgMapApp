@@ -10,6 +10,6 @@
 <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
 <image xlink:href="N03-20250101_27/lvl5/tile0_0.png" preserveAspectRatio="none" x="13500" y="-4500" width="1125" height="1125" visibleMinZoom="4.44" visibleMaxZoom="8.88"/>
 <image xlink:href="N03-20250101_27/lvl6/tile0_1.png" preserveAspectRatio="none" x="13500" y="-3937.5" width="562.5" height="562.5" visibleMinZoom="8.885" visibleMaxZoom="17.77"/>
-<animation xlink:href="./contents/geojson/01/N03-20250101_27_cont_l4_0-3.svg" x="13500" y="-3656.25" width="281.25" height="281.25" visibleMinZoom="35.55"/>
+<animation xlink:href="/contents/geojson/01/N03-20250101_27_cont_l4_0-3.svg" x="13500" y="-3656.25" width="281.25" height="281.25" visibleMinZoom="35.55"/>
 <image xlink:href="N03-20250101_27/lvl7/tile0_3.png" preserveAspectRatio="none" x="13500" y="-3656.25" width="281.25" height="281.25" visibleMinZoom="17.775" visibleMaxZoom="35.55"/>
 </svg>

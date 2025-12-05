@@ -35,7 +35,7 @@
 <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
 <!-- Total:143 records. -->
 <!-- LEVEL: 1 -->
-<animation xlink:href="./contents/geojson/01/N03-20250101_27_cont_l1_0-0.svg" x="13500" y="-4500" width="2250" height="2250" visibleMinZoom="4.44"/>
+<animation xlink:href="/contents/geojson/01/N03-20250101_27_cont_l1_0-0.svg" x="13500" y="-4500" width="2250" height="2250" visibleMinZoom="4.44"/>
 <image xlink:href="N03-20250101_27/lvl4/tile0_0.png" preserveAspectRatio="none" x="13500" y="-4500" width="2250" height="2250" visibleMaxZoom="4.44"/>
 <!-- LEVEL: 2 -->
 <!-- LEVEL: 3 -->
