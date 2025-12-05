@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:go="http://purl.org/svgmap/profile" viewBox="9000.0 -4500.0 9000.0 4500.0" go:dataArea="9000.0 -4500.0 9000.0 4500.0" >
+<!--  参考データです -->
+<!-- Tramsform:[100.0,0.0,0.0,-100.0,0.0,0.0] -->
+<!-- 基準緯線:0.0 -->
+<!-- Bounds:Env[134.252737782 : 136.45503834, 33.432598631 : 35.779258252] -->
+<!-- TypeName:features -->
+<!-- Count:7 -->
+<!-- NS:http://www.opengis.net/gml:features -->
+<!-- Geom:GeometryDescriptorImpl geometry <geometry:Polygon> nillable 0:1 -->
+<!-- attrNo:0 Name:geometry type:Polygon -->
+<!-- attrNo:1 Name:N03_001 type:String -->
+<!-- attrNo:2 Name:N03_002 type:String -->
+<!-- attrNo:3 Name:N03_003 type:String -->
+<!-- attrNo:4 Name:N03_004 type:String -->
+<!-- attrNo:5 Name:N03_005 type:String -->
+<!-- attrNo:6 Name:N03_007 type:String -->
+<!-- OriginalDatum:JGD2000 -->
+<!-- OriginalCrd:LatLon -->
+<!-- defMainColor:#0000ff -->
+<!-- outlineColor: -->
+<!-- mainColorCol:-1 -->
+<!-- outLineColorCol:-1 -->
+<!-- POIsizeCol:-1 -->
+<!-- captionCol:-1 -->
+<!-- dupCheckCol:-1 -->
+<!-- linkCol:-1 -->
+<metadata>
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:crs="http://opengis.org/xmldtds/transformations.dtd" xmlns:svg="http://www.w3.org/svg" >
+  <rdf:Description>
+   <crs:CoordinateReferenceSystem rdf:resource="http://purl.org/crs/84" svg:transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+  </rdf:Description>
+ </rdf:RDF>
+</metadata>
+<globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+<!-- Total:5455 records. -->
+<!-- LEVEL: 0 -->
+<image xlink:href="N03-20250101_56/lvl3/tile0_0.png" preserveAspectRatio="none" x="9000" y="-4500" width="4500" height="4500" visibleMaxZoom="2.22"/>
+<image xlink:href="N03-20250101_56/lvl3/tile1_0.png" preserveAspectRatio="none" x="13500" y="-4500" width="4500" height="4500" visibleMaxZoom="2.22"/>
+<!-- LEVEL: 1 -->
+<animation xlink:href="N03-20250101_56_cont_l1_1-0.svg" x="11250" y="-4500" width="2250" height="2250" visibleMinZoom="4.44"/>
+<image xlink:href="N03-20250101_56/lvl4/tile1_0.png" preserveAspectRatio="none" x="11250" y="-4500" width="2250" height="2250" visibleMinZoom="2.22" visibleMaxZoom="4.44"/>
+<animation xlink:href="N03-20250101_56_cont_l1_2-0.svg" x="13500" y="-4500" width="2250" height="2250" visibleMinZoom="4.44"/>
+<image xlink:href="N03-20250101_56/lvl4/tile2_0.png" preserveAspectRatio="none" x="13500" y="-4500" width="2250" height="2250" visibleMinZoom="2.22" visibleMaxZoom="4.44"/>
+<!-- LEVEL: 2 -->
+<!-- LEVEL: 3 -->
+<!-- LEVEL: 4 -->
+<!-- LEVEL: 5 -->
+<!-- LEVEL: 6 -->
+<!-- LEVEL: 7 -->
+<!-- LEVEL: 8 -->
+<!-- LEVEL: 9 -->
+<!-- LEVEL: 10 -->
+<!-- LEVEL: 11 -->
+<!-- LEVEL: 12 -->
+<!-- LEVEL: 13 -->
+<!-- LEVEL: 14 -->
+</svg>

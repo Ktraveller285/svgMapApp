@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:go="http://purl.org/svgmap/profile" property="geometry,N03_001,N03_002,N03_003,N03_004,N03_005,N03_007" viewBox="13473.6328125 -3471.6796875 8.7890625 8.7890625" go:dataArea="13473.6328125 -3471.6796875 8.7890625 8.7890625" >
+<metadata>
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:crs="http://opengis.org/xmldtds/transformations.dtd" xmlns:svg="http://www.w3.org/svg" >
+  <rdf:Description>
+   <crs:CoordinateReferenceSystem rdf:resource="http://purl.org/crs/84" svg:transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+  </rdf:Description>
+ </rdf:RDF>
+</metadata>
+<globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+<defs>
+ <g id="p0" >
+  <circle cx="0.0" cy="0.0" r="3" stroke="green" stroke-width="2.0" vector-effect="non-scaling-stroke" />
+ </g>
+</defs>
+<g fill="#0000ff" fill-rule="evenodd" opacity="0.5" >
+<path content="兵庫県,,,加古川市,,28210" xlink:title="兵庫県" d="M13482.4219,-3471.6797L13482.4219,-3470.8018L13482.3772,-3470.8333L13481.6667,-3471.3352L13481.5007,-3471.4524L13481.3994,-3471.524L13481.3713,-3471.5441L13481.2158,-3471.6546L13481.1994,-3471.6667L13481.1881,-3471.675L13481.1877,-3471.6753L13481.1791,-3471.6667L13481.1747,-3471.6623L13481.1685,-3471.6667L13481.1501,-3471.6797L13480.6497,-3471.6797L13480.6482,-3471.6667L13480.6458,-3471.6457L13480.6439,-3471.6459L13480.6397,-3471.6465L13480.6379,-3471.6466L13480.64,-3471.6667L13480.6414,-3471.6797Z"/>
+<path content="兵庫県,,,加古川市,,28210" xlink:title="兵庫県" d="M13480.6136,-3471.6285L13480.6052,-3471.3159L13480.5971,-3471.3161L13480.6043,-3471.6326L13480.6083,-3471.6325L13480.6141,-3471.6323L13480.6136,-3471.6285Z"/>
+</g>
+</svg>

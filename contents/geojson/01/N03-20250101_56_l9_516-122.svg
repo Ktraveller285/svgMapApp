@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:go="http://purl.org/svgmap/profile" property="geometry,N03_001,N03_002,N03_003,N03_004,N03_005,N03_007" viewBox="13535.15625 -3427.734375 8.7890625 8.7890625" go:dataArea="13535.15625 -3427.734375 8.7890625 8.7890625" >
+<metadata>
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:crs="http://opengis.org/xmldtds/transformations.dtd" xmlns:svg="http://www.w3.org/svg" >
+  <rdf:Description>
+   <crs:CoordinateReferenceSystem rdf:resource="http://purl.org/crs/84" svg:transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+  </rdf:Description>
+ </rdf:RDF>
+</metadata>
+<globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+<defs>
+ <g id="p0" >
+  <circle cx="0.0" cy="0.0" r="3" stroke="green" stroke-width="2.0" vector-effect="non-scaling-stroke" />
+ </g>
+</defs>
+<g fill="#0000ff" fill-rule="evenodd" opacity="0.5" >
+<path content="和歌山県,,,紀の川市,,30208" xlink:title="和歌山県" d="M13543.9453,-3427.7344L13543.9453,-3418.9453L13540.601,-3418.9453L13540.5958,-3418.9509L13540.5866,-3418.9542L13540.567,-3418.9563L13540.5525,-3418.9533L13540.5408,-3418.9509L13540.5255,-3418.9453L13540.4637,-3418.9453L13540.4335,-3418.9509L13540.3979,-3418.9497L13540.3823,-3418.9453L13540.2365,-3418.9453L13540.2343,-3418.9454L13540.2199,-3418.9465L13540.2154,-3418.9453L13535.1563,-3418.9453L13535.1563,-3427.7344Z"/>
+<path content="和歌山県,,海草郡,紀美野町,,30304" xlink:title="和歌山県" d="M13543.9453,-3418.9453L13540.2154,-3418.9453L13540.2199,-3418.9465L13540.2343,-3418.9454L13540.2365,-3418.9453L13540.3823,-3418.9453L13540.3979,-3418.9497L13540.4335,-3418.9509L13540.4637,-3418.9453L13540.5255,-3418.9453L13540.5408,-3418.9509L13540.5525,-3418.9533L13540.567,-3418.9563L13540.5866,-3418.9542L13540.5958,-3418.9509L13540.601,-3418.9453L13543.9453,-3418.9453Z"/>
+</g>
+</svg>

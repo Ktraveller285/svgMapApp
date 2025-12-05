@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:go="http://purl.org/svgmap/profile" property="geometry,N03_001,N03_002,N03_003,N03_004,N03_005,N03_007" viewBox="13587.890625 -3366.2109375 4.39453125 4.39453125" go:dataArea="13587.890625 -3366.2109375 4.39453125 4.39453125" >
+<metadata>
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:crs="http://opengis.org/xmldtds/transformations.dtd" xmlns:svg="http://www.w3.org/svg" >
+  <rdf:Description>
+   <crs:CoordinateReferenceSystem rdf:resource="http://purl.org/crs/84" svg:transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+  </rdf:Description>
+ </rdf:RDF>
+</metadata>
+<globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+<defs>
+ <g id="p0" >
+  <circle cx="0.0" cy="0.0" r="3" stroke="green" stroke-width="2.0" vector-effect="non-scaling-stroke" />
+ </g>
+</defs>
+<g fill="#0000ff" fill-rule="evenodd" opacity="0.5" >
+<path content="和歌山県,,東牟婁郡,那智勝浦町,,30421" xlink:title="和歌山県" d="M13592.2852,-3366.2109L13592.2852,-3361.8164L13587.8906,-3361.8164L13587.8906,-3366.2109Z"/>
+</g>
+</svg>

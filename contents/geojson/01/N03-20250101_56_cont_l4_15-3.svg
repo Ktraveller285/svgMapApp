@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:go="http://purl.org/svgmap/profile" viewBox="9000.0 -4500.0 9000.0 4500.0" go:dataArea="9000.0 -4500.0 9000.0 4500.0" >
+<metadata>
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:crs="http://opengis.org/xmldtds/transformations.dtd" xmlns:svg="http://www.w3.org/svg" >
+  <rdf:Description>
+   <crs:CoordinateReferenceSystem rdf:resource="http://purl.org/crs/84" svg:transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+  </rdf:Description>
+ </rdf:RDF>
+</metadata>
+<globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+<image xlink:href="N03-20250101_56/lvl8/tile31_6.png" preserveAspectRatio="none" x="13359.375" y="-3656.25" width="140.625" height="140.625" visibleMinZoom="35.555" visibleMaxZoom="71.11"/>
+<image xlink:href="N03-20250101_56/lvl8/tile31_7.png" preserveAspectRatio="none" x="13359.375" y="-3515.625" width="140.625" height="140.625" visibleMinZoom="35.555" visibleMaxZoom="71.11"/>
+<image xlink:href="N03-20250101_56/lvl9/tile63_13.png" preserveAspectRatio="none" x="13429.6875" y="-3585.9375" width="70.3125" height="70.3125" visibleMinZoom="71.11" visibleMaxZoom="142.22"/>
+<animation xlink:href="N03-20250101_56_l6_62-14.svg" x="13359.375" y="-3515.625" width="70.3125" height="70.3125" visibleMinZoom="142.22"/>
+<image xlink:href="N03-20250101_56/lvl9/tile62_14.png" preserveAspectRatio="none" x="13359.375" y="-3515.625" width="70.3125" height="70.3125" visibleMinZoom="71.11" visibleMaxZoom="142.22"/>
+<image xlink:href="N03-20250101_56/lvl9/tile63_14.png" preserveAspectRatio="none" x="13429.6875" y="-3515.625" width="70.3125" height="70.3125" visibleMinZoom="71.11" visibleMaxZoom="142.22"/>
+<image xlink:href="N03-20250101_56/lvl9/tile63_15.png" preserveAspectRatio="none" x="13429.6875" y="-3445.3125" width="70.3125" height="70.3125" visibleMinZoom="71.11" visibleMaxZoom="142.22"/>
+<animation xlink:href="N03-20250101_56_cont_l7_127-30.svg" x="13464.8438" y="-3445.3125" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
+<image xlink:href="N03-20250101_56/lvl10/tile127_30.png" preserveAspectRatio="none" x="13464.8438" y="-3445.3125" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
+<animation xlink:href="N03-20250101_56_cont_l7_126-28.svg" x="13429.6875" y="-3515.625" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
+<image xlink:href="N03-20250101_56/lvl10/tile126_28.png" preserveAspectRatio="none" x="13429.6875" y="-3515.625" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
+<animation xlink:href="N03-20250101_56_cont_l7_127-28.svg" x="13464.8438" y="-3515.625" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
+<image xlink:href="N03-20250101_56/lvl10/tile127_28.png" preserveAspectRatio="none" x="13464.8438" y="-3515.625" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
+<animation xlink:href="N03-20250101_56_cont_l7_126-29.svg" x="13429.6875" y="-3480.4688" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
+<image xlink:href="N03-20250101_56/lvl10/tile126_29.png" preserveAspectRatio="none" x="13429.6875" y="-3480.4688" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
+<animation xlink:href="N03-20250101_56_cont_l7_127-29.svg" x="13464.8438" y="-3480.4688" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
+<image xlink:href="N03-20250101_56/lvl10/tile127_29.png" preserveAspectRatio="none" x="13464.8438" y="-3480.4688" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
+<animation xlink:href="N03-20250101_56_cont_l7_126-26.svg" x="13429.6875" y="-3585.9375" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
+<image xlink:href="N03-20250101_56/lvl10/tile126_26.png" preserveAspectRatio="none" x="13429.6875" y="-3585.9375" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
+<animation xlink:href="N03-20250101_56_cont_l7_127-26.svg" x="13464.8438" y="-3585.9375" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
+<image xlink:href="N03-20250101_56/lvl10/tile127_26.png" preserveAspectRatio="none" x="13464.8438" y="-3585.9375" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
+<animation xlink:href="N03-20250101_56_cont_l7_126-27.svg" x="13429.6875" y="-3550.7812" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
+<image xlink:href="N03-20250101_56/lvl10/tile126_27.png" preserveAspectRatio="none" x="13429.6875" y="-3550.7812" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
+<animation xlink:href="N03-20250101_56_cont_l7_127-27.svg" x="13464.8438" y="-3550.7812" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
+<image xlink:href="N03-20250101_56/lvl10/tile127_27.png" preserveAspectRatio="none" x="13464.8438" y="-3550.7812" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
+</svg>

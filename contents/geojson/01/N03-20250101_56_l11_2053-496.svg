@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:go="http://purl.org/svgmap/profile" property="geometry,N03_001,N03_002,N03_003,N03_004,N03_005,N03_007" viewBox="13510.986328125 -3410.15625 2.197265625 2.197265625" go:dataArea="13510.986328125 -3410.15625 2.197265625 2.197265625" >
+<metadata>
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:crs="http://opengis.org/xmldtds/transformations.dtd" xmlns:svg="http://www.w3.org/svg" >
+  <rdf:Description>
+   <crs:CoordinateReferenceSystem rdf:resource="http://purl.org/crs/84" svg:transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+  </rdf:Description>
+ </rdf:RDF>
+</metadata>
+<globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+<defs>
+ <g id="p0" >
+  <circle cx="0.0" cy="0.0" r="3" stroke="green" stroke-width="2.0" vector-effect="non-scaling-stroke" />
+ </g>
+</defs>
+<g fill="#0000ff" fill-rule="evenodd" opacity="0.5" >
+<path content="和歌山県,,,有田市,,30204" xlink:title="和歌山県" d="M13513.1836,-3410.1562L13513.1836,-3407.959L13510.9863,-3407.959L13510.9863,-3409.6979L13510.997,-3409.7175L13510.9976,-3409.7186L13510.9978,-3409.7189L13510.9991,-3409.7213L13510.9863,-3409.7202L13510.9863,-3409.7216L13511,-3409.7229L13511.005,-3409.7323L13511.006,-3409.7335L13511.0068,-3409.7342L13511.0092,-3409.7341L13511.0116,-3409.7331L13511.0128,-3409.7321L13511.0135,-3409.7309L13511.0136,-3409.7301L13510.9913,-3409.6924L13511.0547,-3409.6681L13511.06,-3409.6759L13511.0697,-3409.6718L13511.0772,-3409.6836L13511.0896,-3409.6979L13511.1061,-3409.7227L13511.1272,-3409.7596L13511.1314,-3409.7669L13511.1572,-3409.8121L13511.1308,-3409.8223L13511.1242,-3409.8248L13511.1105,-3409.8L13511.1069,-3409.8016L13511.1209,-3409.8261L13511.0654,-3409.8474L13511.0165,-3409.7593L13511.0081,-3409.758L13510.9863,-3409.7543L13510.9863,-3410.1562Z"/>
+</g>
+</svg>

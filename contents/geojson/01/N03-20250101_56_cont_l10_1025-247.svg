@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:go="http://purl.org/svgmap/profile" viewBox="9000.0 -4500.0 9000.0 4500.0" go:dataArea="9000.0 -4500.0 9000.0 4500.0" >
+<metadata>
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:crs="http://opengis.org/xmldtds/transformations.dtd" xmlns:svg="http://www.w3.org/svg" >
+  <rdf:Description>
+   <crs:CoordinateReferenceSystem rdf:resource="http://purl.org/crs/84" svg:transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+  </rdf:Description>
+ </rdf:RDF>
+</metadata>
+<globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+<image xlink:href="N03-20250101_56/lvl14/tile2051_495.png" preserveAspectRatio="none" x="13506.5918" y="-3412.3535" width="2.1973" height="2.1973" visibleMinZoom="2275.555" visibleMaxZoom="4551.11"/>
+<animation xlink:href="N03-20250101_56_l12_4102-990.svg" x="13506.5918" y="-3412.3535" width="1.0986" height="1.0986" visibleMinZoom="9102.22"/>
+<image xlink:href="N03-20250101_56/lvl15/tile4102_990.png" preserveAspectRatio="none" x="13506.5918" y="-3412.3535" width="1.0986" height="1.0986" visibleMinZoom="4551.11" visibleMaxZoom="9102.22"/>
+<animation xlink:href="N03-20250101_56_l12_4103-990.svg" x="13507.6904" y="-3412.3535" width="1.0986" height="1.0986" visibleMinZoom="9102.22"/>
+<image xlink:href="N03-20250101_56/lvl15/tile4103_990.png" preserveAspectRatio="none" x="13507.6904" y="-3412.3535" width="1.0986" height="1.0986" visibleMinZoom="4551.11" visibleMaxZoom="9102.22"/>
+<animation xlink:href="N03-20250101_56_l12_4102-991.svg" x="13506.5918" y="-3411.2549" width="1.0986" height="1.0986" visibleMinZoom="9102.22"/>
+<image xlink:href="N03-20250101_56/lvl15/tile4102_991.png" preserveAspectRatio="none" x="13506.5918" y="-3411.2549" width="1.0986" height="1.0986" visibleMinZoom="4551.11" visibleMaxZoom="9102.22"/>
+<animation xlink:href="N03-20250101_56_l12_4103-991.svg" x="13507.6904" y="-3411.2549" width="1.0986" height="1.0986" visibleMinZoom="9102.22"/>
+<image xlink:href="N03-20250101_56/lvl15/tile4103_991.png" preserveAspectRatio="none" x="13507.6904" y="-3411.2549" width="1.0986" height="1.0986" visibleMinZoom="4551.11" visibleMaxZoom="9102.22"/>
+</svg>
