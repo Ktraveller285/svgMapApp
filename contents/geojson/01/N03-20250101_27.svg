@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:go="http://purl.org/svgmap/profile" viewBox="13500.0 -4500.0 4500.0 4500.0" go:dataArea="13500.0 -4500.0 4500.0 4500.0" >
+<!--  参考データです -->
+<!-- Tramsform:[100.0,0.0,0.0,-100.0,0.0,0.0] -->
+<!-- 基準緯線:0.0 -->
+<!-- Bounds:Env[135.091298054 : 135.746603061, 34.271820829 : 35.051292775] -->
+<!-- TypeName:features -->
+<!-- Count:7 -->
+<!-- NS:http://www.opengis.net/gml:features -->
+<!-- Geom:GeometryDescriptorImpl geometry <geometry:Polygon> nillable 0:1 -->
+<!-- attrNo:0 Name:geometry type:Polygon -->
+<!-- attrNo:1 Name:N03_001 type:String -->
+<!-- attrNo:2 Name:N03_002 type:String -->
+<!-- attrNo:3 Name:N03_003 type:String -->
+<!-- attrNo:4 Name:N03_004 type:String -->
+<!-- attrNo:5 Name:N03_005 type:String -->
+<!-- attrNo:6 Name:N03_007 type:String -->
+<!-- OriginalDatum:JGD2000 -->
+<!-- OriginalCrd:LatLon -->
+<!-- defMainColor:#0000ff -->
+<!-- outlineColor: -->
+<!-- mainColorCol:-1 -->
+<!-- outLineColorCol:-1 -->
+<!-- POIsizeCol:-1 -->
+<!-- captionCol:-1 -->
+<!-- dupCheckCol:-1 -->
+<!-- linkCol:-1 -->
+<metadata>
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:crs="http://opengis.org/xmldtds/transformations.dtd" xmlns:svg="http://www.w3.org/svg" >
+  <rdf:Description>
+   <crs:CoordinateReferenceSystem rdf:resource="http://purl.org/crs/84" svg:transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+  </rdf:Description>
+ </rdf:RDF>
+</metadata>
+<globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
+<!-- Total:143 records. -->
+<!-- LEVEL: 1 -->
+<animation xlink:href="./N03-20250101_27_cont_l1_0-0.svg" x="13500" y="-4500" width="2250" height="2250" visibleMinZoom="4.44"/>
+<image xlink:href="N03-20250101_27/lvl4/tile0_0.png" preserveAspectRatio="none" x="13500" y="-4500" width="2250" height="2250" visibleMaxZoom="4.44"/>
+<!-- LEVEL: 2 -->
+<!-- LEVEL: 3 -->
+<!-- LEVEL: 4 -->
+<!-- LEVEL: 5 -->
+<!-- LEVEL: 6 -->
+<!-- LEVEL: 7 -->
+<!-- LEVEL: 8 -->
+<!-- LEVEL: 9 -->
+<!-- LEVEL: 10 -->
+</svg>
