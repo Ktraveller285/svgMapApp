@@ -10,19 +10,19 @@
 <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
 <image xlink:href="N03-20250101_27/lvl8/tile0_7.png" preserveAspectRatio="none" x="13500" y="-3515.625" width="140.625" height="140.625" visibleMinZoom="35.555" visibleMaxZoom="71.11"/>
 <image xlink:href="N03-20250101_27/lvl9/tile0_14.png" preserveAspectRatio="none" x="13500" y="-3515.625" width="70.3125" height="70.3125" visibleMinZoom="71.11" visibleMaxZoom="142.22"/>
-<animation xlink:href="/contents/geojson/01/N03-20250101_27_l6_1-14.svg" x="13570.3125" y="-3515.625" width="70.3125" height="70.3125" visibleMinZoom="142.22"/>
+<animation xlink:href="contents/geojson/01/N03-20250101_27_l6_1-14.svg" x="13570.3125" y="-3515.625" width="70.3125" height="70.3125" visibleMinZoom="142.22"/>
 <image xlink:href="N03-20250101_27/lvl9/tile1_14.png" preserveAspectRatio="none" x="13570.3125" y="-3515.625" width="70.3125" height="70.3125" visibleMinZoom="71.11" visibleMaxZoom="142.22"/>
 <image xlink:href="N03-20250101_27/lvl9/tile0_15.png" preserveAspectRatio="none" x="13500" y="-3445.3125" width="70.3125" height="70.3125" visibleMinZoom="71.11" visibleMaxZoom="142.22"/>
 <animation xlink:href="N03-20250101_27_l7_0-28.svg" x="13500" y="-3515.625" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
 <image xlink:href="N03-20250101_27/lvl10/tile0_28.png" preserveAspectRatio="none" x="13500" y="-3515.625" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
-<animation xlink:href="/contents/geojson/01/N03-20250101_27_cont_l7_1-28.svg" x="13535.1562" y="-3515.625" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
+<animation xlink:href="contents/geojson/01/N03-20250101_27_cont_l7_1-28.svg" x="13535.1562" y="-3515.625" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
 <image xlink:href="N03-20250101_27/lvl10/tile1_28.png" preserveAspectRatio="none" x="13535.1562" y="-3515.625" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
-<animation xlink:href="/contents/geojson/01/N03-20250101_27_l7_0-29.svg" x="13500" y="-3480.4688" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
+<animation xlink:href="contents/geojson/01/N03-20250101_27_l7_0-29.svg" x="13500" y="-3480.4688" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
 <image xlink:href="N03-20250101_27/lvl10/tile0_29.png" preserveAspectRatio="none" x="13500" y="-3480.4688" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
-<animation xlink:href="/contents/geojson/01/N03-20250101_27_cont_l7_1-29.svg" x="13535.1562" y="-3480.4688" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
+<animation xlink:href="contents/geojson/01/N03-20250101_27_cont_l7_1-29.svg" x="13535.1562" y="-3480.4688" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
 <image xlink:href="N03-20250101_27/lvl10/tile1_29.png" preserveAspectRatio="none" x="13535.1562" y="-3480.4688" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
-<animation xlink:href="/contents/geojson/01/N03-20250101_27_cont_l7_0-30.svg" x="13500" y="-3445.3125" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
+<animation xlink:href="contents/geojson/01/N03-20250101_27_cont_l7_0-30.svg" x="13500" y="-3445.3125" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
 <image xlink:href="N03-20250101_27/lvl10/tile0_30.png" preserveAspectRatio="none" x="13500" y="-3445.3125" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
-<animation xlink:href="/contents/geojson/01/N03-20250101_27_cont_l7_1-30.svg" x="13535.1562" y="-3445.3125" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
+<animation xlink:href="contents/geojson/01/N03-20250101_27_cont_l7_1-30.svg" x="13535.1562" y="-3445.3125" width="35.1562" height="35.1562" visibleMinZoom="284.44"/>
 <image xlink:href="N03-20250101_27/lvl10/tile1_30.png" preserveAspectRatio="none" x="13535.1562" y="-3445.3125" width="35.1562" height="35.1562" visibleMinZoom="142.22" visibleMaxZoom="284.44"/>
 </svg>
