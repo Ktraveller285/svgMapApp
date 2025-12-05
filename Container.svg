@@ -9,7 +9,8 @@
   <animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/osmTileProviders/osmtp.svg" title="OpenStreetMap Etc" class="basemap switch" visibility="hidden"/>
   <animation x="-300" y="-300" width="600" height="600" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/dynamicOSM_r11.svg" title="OpenStreetMap(Global)" class="basemap switch" visibility="visible"/>
   <!-- 自作データ -->
-  <animation title="新幹線停車駅（近畿地方）" xlink:href=".\contents\csv\station\shinkansen_sjis.svg" class="自作" x="-30000" y="-30000" width="60000" height="60000" visibility="visible"/>
-  <animation title="県庁所在地（近畿地方）" xlink:href=".\contents\csv\prefecture\JPprefecture_utf8.svg" class="自作" x="-30000" y="-30000" width="60000" height="60000" visibility="visible"/>
+  <animation title="都道府県境（近畿地方）" xlink:href="./contents/geojson/01/N03-20250101_27.svg" class="自作（面データ）" x="-30000" y="-30000" width="60000" height="60000" visibility="visible"/>
+  <animation title="新幹線停車駅（近畿地方）" xlink:href="./contents/csv/station/shinkansen_sjis.svg" class="自作（点データ）" x="-30000" y="-30000" width="60000" height="60000" visibility="hidden"/>
+  <animation title="県庁所在地（近畿地方）" xlink:href="./contents/csv/prefecture/JPprefecture_utf8.svg" class="自作（点データ）" x="-30000" y="-30000" width="60000" height="60000" visibility="hidden"/>
   <!-- #HOSPITAL など大文字でカテゴリ名入れるとカテゴリ固定レイヤ化可能-->
 </svg>
