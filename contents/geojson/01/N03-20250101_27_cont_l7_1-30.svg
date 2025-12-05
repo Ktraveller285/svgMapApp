@@ -9,14 +9,14 @@
 </metadata>
 <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(100.0,0.0,0.0,-100.0,0.0,0.0)" />
 <image xlink:href="N03-20250101_27/lvl11/tile2_60.png" preserveAspectRatio="none" x="13535.1562" y="-3445.3125" width="17.5781" height="17.5781" visibleMinZoom="284.44" visibleMaxZoom="568.88"/>
-<animation xlink:href=".\contents\geojson\N03-20250101_27_l8_3-60.svg" x="13552.7344" y="-3445.3125" width="17.5781" height="17.5781" visibleMinZoom="568.88"/>
+<animation xlink:href="./contents/geojson/01/N03-20250101_27_l8_3-60.svg" x="13552.7344" y="-3445.3125" width="17.5781" height="17.5781" visibleMinZoom="568.88"/>
 <image xlink:href="N03-20250101_27/lvl11/tile3_60.png" preserveAspectRatio="none" x="13552.7344" y="-3445.3125" width="17.5781" height="17.5781" visibleMinZoom="284.44" visibleMaxZoom="568.88"/>
-<animation xlink:href=".\contents\geojson\N03-20250101_27_l9_4-120.svg" x="13535.1562" y="-3445.3125" width="8.7891" height="8.7891" visibleMinZoom="1137.77"/>
+<animation xlink:href="./contents/geojson/01/N03-20250101_27_l9_4-120.svg" x="13535.1562" y="-3445.3125" width="8.7891" height="8.7891" visibleMinZoom="1137.77"/>
 <image xlink:href="N03-20250101_27/lvl12/tile4_120.png" preserveAspectRatio="none" x="13535.1562" y="-3445.3125" width="8.7891" height="8.7891" visibleMinZoom="568.885" visibleMaxZoom="1137.77"/>
-<animation xlink:href=".\contents\geojson\N03-20250101_27_l9_5-120.svg" x="13543.9453" y="-3445.3125" width="8.7891" height="8.7891" visibleMinZoom="1137.77"/>
+<animation xlink:href="./contents/geojson/01/N03-20250101_27_l9_5-120.svg" x="13543.9453" y="-3445.3125" width="8.7891" height="8.7891" visibleMinZoom="1137.77"/>
 <image xlink:href="N03-20250101_27/lvl12/tile5_120.png" preserveAspectRatio="none" x="13543.9453" y="-3445.3125" width="8.7891" height="8.7891" visibleMinZoom="568.885" visibleMaxZoom="1137.77"/>
-<animation xlink:href=".\contents\geojson\N03-20250101_27_l9_4-121.svg" x="13535.1562" y="-3436.5234" width="8.7891" height="8.7891" visibleMinZoom="1137.77"/>
+<animation xlink:href="./contents/geojson/01/N03-20250101_27_l9_4-121.svg" x="13535.1562" y="-3436.5234" width="8.7891" height="8.7891" visibleMinZoom="1137.77"/>
 <image xlink:href="N03-20250101_27/lvl12/tile4_121.png" preserveAspectRatio="none" x="13535.1562" y="-3436.5234" width="8.7891" height="8.7891" visibleMinZoom="568.885" visibleMaxZoom="1137.77"/>
-<animation xlink:href=".\contents\geojson\N03-20250101_27_l9_5-121.svg" x="13543.9453" y="-3436.5234" width="8.7891" height="8.7891" visibleMinZoom="1137.77"/>
+<animation xlink:href="./contents/geojson/01/N03-20250101_27_l9_5-121.svg" x="13543.9453" y="-3436.5234" width="8.7891" height="8.7891" visibleMinZoom="1137.77"/>
 <image xlink:href="N03-20250101_27/lvl12/tile5_121.png" preserveAspectRatio="none" x="13543.9453" y="-3436.5234" width="8.7891" height="8.7891" visibleMinZoom="568.885" visibleMaxZoom="1137.77"/>
 </svg>
