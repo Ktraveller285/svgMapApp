@@ -1,40 +1,67 @@
-/*
- * 登録ボタン
- */
+// 1. Firebase SDK の読み込み
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  serverTimestamp,
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+// Firebase設定
+const firebaseConfig = {
+  apiKey: "AIzaSyBAJjnZj-TVSD7lzLjJGPnbzHcSdJ5D4dk",
+  authDomain: "denlabo-svgmap-exp.firebaseapp.com",
+  projectId: "denlabo-svgmap-exp",
+  storageBucket: "denlabo-svgmap-exp.firebasestorage.app",
+  messagingSenderId: "74174609992",
+  appId: "1:74174609992:web:df2a5d17f215f74d1df67d",
+};
+
+// Firebase アプリを初期化
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// 2. 登録ボタンを押したときの処理（座標取得＆画面表示）
 document.getElementById("btn-open-post").addEventListener("click", function () {
-  // 1. 座標情報の取得
-  // 画面上の #centerPos という要素から緯度経度を取得する
   const centerPosElement = document.querySelector("#centerPos");
   const centerPosText = centerPosElement ? centerPosElement.innerText : "";
-
-  // 2. 座標のパース（数値の抽出）
-  // 文字の中から数字（例: 135.123 や 35.678）を探す
-  const coords = centerPosText.match(/-?\d+(\.\d+)?/g);
+  const matches = centerPosText.match(/-?\d+(\.\d+)?/g);
 
   let lat = "";
   let lon = "";
 
-  if (coords && coords.length >= 2) {
-    const val1 = parseFloat(coords[0]);
-    const val2 = parseFloat(coords[1]);
+  if (matches) {
+    let candidateLat = null;
+    let candidateLon = null;
 
-    // 日本付近の座標と仮定して、大きい数字を経度(lon)、小さい数字を緯度(lat)に振り分ける
-    if (val1 > val2) {
-      lon = val1;
-      lat = val2;
-    } else {
-      lat = val1;
-      lon = val2;
+    // 緯度経度が日本の範囲に入っているかのチェック
+    matches.forEach((strVal) => {
+      const val = parseFloat(strVal);
+      if (val >= 20 && val <= 46) {
+        if (!candidateLat || strVal.includes(".")) candidateLat = val;
+      }
+      if (val >= 120 && val <= 155) {
+        if (!candidateLon || strVal.includes(".")) candidateLon = val;
+      }
+    });
+
+    if (candidateLat && candidateLon) {
+      lat = candidateLat;
+      lon = candidateLon;
+    } else if (matches.length >= 2) {
+      const val1 = parseFloat(matches[0]);
+      const val2 = parseFloat(matches[1]);
+      if (val1 > val2) {
+        lon = val1;
+        lat = val2;
+      } else {
+        lat = val1;
+        lon = val2;
+      }
     }
-  } else {
-    alert(
-      "座標が取得できませんでした。\n画面内の #centerPos 要素を確認してください。"
-    );
-    return;
   }
 
-  // 3. フォームへの自動入力
-  // 取得した数値を入力欄にセット
+  // フォームに値をセット
   document.getElementById("input-lat").value = lat;
   document.getElementById("input-lon").value = lon;
 
@@ -43,38 +70,58 @@ document.getElementById("btn-open-post").addEventListener("click", function () {
   now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
   document.getElementById("input-date").value = now.toISOString().slice(0, 16);
 
-  // 4. 投稿画面（モーダル）を表示する
+  // 画面を表示
   document.getElementById("post-modal").style.display = "flex";
 });
 
-/*
- * キャンセルボタンを押したときの処理
- */
+// 3. キャンセルボタン
 document.getElementById("btn-cancel").addEventListener("click", function () {
   document.getElementById("post-modal").style.display = "none";
 });
 
-/*
- * 送信ボタン
- */
-document.getElementById("btn-submit").addEventListener("click", function () {
-  // 入力チェック
-  const latStr = document.getElementById("input-lat").value;
-  const dateStr = document.getElementById("input-date").value;
+// 4. 登録するボタン（Firestoreへの送信処理）
+document
+  .getElementById("btn-submit")
+  .addEventListener("click", async function () {
+    // 入力値を取得
+    const latStr = document.getElementById("input-lat").value;
+    const lonStr = document.getElementById("input-lon").value;
+    const dateStr = document.getElementById("input-date").value;
+    const comment = document.getElementById("input-comment").value;
 
-  if (!latStr || !dateStr) {
-    alert("座標と日時は必須です。");
-    return;
-  }
+    // バリデーション
+    if (!latStr || !lonStr || !dateStr) {
+      alert("座標と日時は必須です。");
+      return;
+    }
 
-  // --- TODO: 送信処理 ---
+    // 二重送信防止のためボタンを無効化
+    const submitBtn = document.getElementById("btn-submit");
+    submitBtn.disabled = true;
+    submitBtn.innerText = "送信中...";
 
-  // 完了メッセージ
-  alert("報告ありがとうございました。\n数分以内に地図に反映されます。");
+    try {
+      // Firestore の "sightings" コレクションに追加
+      await addDoc(collection(db, "sightings"), {
+        latitude: parseFloat(latStr),
+        longitude: parseFloat(lonStr),
+        sightedAt: new Date(dateStr), // Timestamp型として保存
+        comment: comment,
+        createdAt: serverTimestamp(),
+      });
 
-  // 画面を閉じる
-  document.getElementById("post-modal").style.display = "none";
+      // 成功メッセージ
+      alert("報告ありがとうございました。\n数分以内に地図に反映されます。");
+      document.getElementById("post-modal").style.display = "none";
 
-  // 入力欄をクリア
-  document.getElementById("input-comment").value = "";
-});
+      // 入力欄をクリア
+      document.getElementById("input-comment").value = "";
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert("送信に失敗しました。\n" + error.message);
+    } finally {
+      // ボタンを元に戻す
+      submitBtn.disabled = false;
+      submitBtn.innerText = "登録する";
+    }
+  });
