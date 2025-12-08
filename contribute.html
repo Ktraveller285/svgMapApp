@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>フロントエンドでの Firestore の読み書き</title>
+  </head>
+  <script type="module">
+    // Firebase SDK をインポート
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      getDocs,
+      getDoc,
+      serverTimestamp,
+    } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+    // Firebase プロジェクトの設定
+    const firebaseConfig = {
+      apiKey: "AIzaSyBAJjnZj-TVSD7lzLjJGPnbzHcSdJ5D4dk",
+      authDomain: "denlabo-svgmap-exp.firebaseapp.com",
+      projectId: "denlabo-svgmap-exp",
+      storageBucket: "denlabo-svgmap-exp.firebasestorage.app",
+      messagingSenderId: "74174609992",
+      appId: "1:74174609992:web:df2a5d17f215f74d1df67d",
+    };
+
+    // Firebase アプリを初期化
+    const app = initializeApp(firebaseConfig);
+
+    // Firestore インスタンスを取得
+    const db = getFirestore();
+
+    /**
+     * Firestore にドキュメントを追加する関数
+     */
+    async function addDocument() {
+      // testCollection というコレクション(テーブル)を取得
+      const sightingsCollection = collection(db, "sightingsCollection");
+
+      // コレクションにドキュメントを追加
+      const docRef = await addDoc(sightingsCollection, {
+        latitude: 35.004592537955936, // 緯度
+        longtitude: 135.8685808936526, // 経度
+        comment: "test",
+        sightedAt: new Date(), // 目撃日時 (とりあえず現在の日時を入れています)
+        timestamp: serverTimestamp(), // サーバー側の日時を使用
+      });
+
+      // メッセージを表示
+      window.alert(`目撃情報を追加しました: ${docRef.id}`);
+    }
+    /**
+     * Firestore のドキュメント数を表示する関数
+     */
+    async function showNumOfDocuments() {
+      // testCollection というコレクション(テーブル)を取得
+      const testCollection = collection(db, "testCollection");
+
+      // コレクションのドキュメントを取得
+      const snapshot = await getDocs(testCollection);
+
+      // ドキュメント数を表示
+      window.alert(`ドキュメント数: ${snapshot.size}`);
+    }
+
+    // ページの読み込みが完了するまで待つ
+    window.addEventListener("load", async () => {
+      // Firestore にドキュメントを追加
+      await addDocument();
+      // Firestore のドキュメント数を表示
+      await showNumOfDocuments();
+    });
+  </script>
+</html>
