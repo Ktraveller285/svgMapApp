@@ -12,20 +12,14 @@ const storage = getStorage();
 exports.generateMapLayer = onDocumentCreated(
   "sightings/{docId}",
   async (event) => {
-    console.log("SVG生成処理を開始します (リンク列追加・解決版)");
+    console.log("SVG生成処理を開始します (ピン画像→赤丸置換版)");
 
     try {
       const snapshot = await db.collection("sightings").get();
-      if (snapshot.empty) {
-        console.log("データが存在しません。");
-        return;
-      }
+      if (snapshot.empty) return;
 
-      // CSV配列
       const rows = [];
-
-      // ★ヘッダー: 5列構成にします (ローカル成功パターン)
-      // latitude, longitude, sightedAt, comment, link
+      // ヘッダー (5列)
       rows.push("latitude,longitude,sightedAt,comment,link");
 
       snapshot.forEach((doc) => {
@@ -35,11 +29,9 @@ exports.generateMapLayer = onDocumentCreated(
 
         if (typeof lat !== "number" || typeof lon !== "number") return;
 
-        // コメント整形
         let comment = (data.comment || "").replace(/[\r\n,]/g, " ").trim();
         if (!comment) comment = "-";
 
-        // 日時生成
         let d;
         if (data.sightedAt && data.sightedAt.toDate) {
           d = data.sightedAt.toDate();
@@ -55,15 +47,10 @@ exports.generateMapLayer = onDocumentCreated(
         const SS = ("0" + jst.getUTCSeconds()).slice(-2);
         const dateStr = `${yyyy}/${mm}/${dd} ${HH}:${MM}:${SS}`;
 
-        // ★データ行: 最後にダミーリンク "#" を追加
         rows.push(`${lat},${lon},${dateStr},${comment},#`);
       });
 
-      // 配列を結合 (BOMなし)
       const csvContent = rows.join("\r\n");
-
-      console.log("生成CSV:");
-      console.log(csvContent);
 
       // APIへ送信
       const apiUrl =
@@ -88,11 +75,24 @@ exports.generateMapLayer = onDocumentCreated(
         responseType: "text",
       });
 
-      console.log("SVG生成成功 (サイズ: " + apiResponse.data.length + ")");
+      // ★★★ ここでSVGの中身を書き換えます ★★★
+      let svgData = apiResponse.data;
 
+      // <image ... mappin.png ... /> というタグを全て探し、
+      // <circle ... /> (赤い丸) に置換します。
+      // ※ 半径(r)は地図の縮尺に合わせて調整が必要
+      svgData = svgData.replace(
+        /<image xlink:href="mappin.*?"[^>]*?>/g,
+        '<circle cx="0" cy="0" r="5" fill="red" stroke="white" stroke-width="2" />'
+      );
+
+      console.log("SVG内の画像を赤丸に置換しました");
+
+      // 保存
       const bucket = storage.bucket();
       const file = bucket.file("layer_sightings.svg");
-      await file.save(apiResponse.data, {
+      await file.save(svgData, {
+        // 書き換えた svgData を保存
         contentType: "image/svg+xml",
         metadata: { cacheControl: "public, max-age=60" },
       });
@@ -100,9 +100,6 @@ exports.generateMapLayer = onDocumentCreated(
       console.log("保存完了");
     } catch (error) {
       console.error("エラー:", error.message);
-      if (error.response) {
-        console.error("APIレスポンス:", error.response.data);
-      }
     }
   }
 );
