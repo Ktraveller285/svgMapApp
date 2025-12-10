@@ -1,8 +1,3 @@
-/**
- * 熊目撃情報マップ バックエンド処理 (初期実装版)
- * 仕様書: 3. 処理のフローとアーキテクチャ に準拠
- */
-
 const { onDocumentCreated } = require("firebase-functions/v2/firestore");
 const { initializeApp } = require("firebase-admin/app");
 const { getFirestore } = require("firebase-admin/firestore");
@@ -10,114 +5,102 @@ const { getStorage } = require("firebase-admin/storage");
 const axios = require("axios");
 const FormData = require("form-data");
 
-// Firebase Admin SDK の初期化
 initializeApp();
-
-// データベースとストレージの参照を取得
 const db = getFirestore();
 const storage = getStorage();
 
-/**
- * 熊目撃情報が登録されたら実行される関数
- * トリガー: Firestore の sightings コレクションへの新規作成
- */
 exports.generateMapLayer = onDocumentCreated(
   "sightings/{docId}",
   async (event) => {
-    console.log("新規データの登録を検知しました。SVG生成処理を開始します。");
+    console.log("SVG生成処理を開始します (リンク列追加・解決版)");
 
     try {
-      // =========================================================
-      // 1. Firestore から全データを取得する
-      // =========================================================
       const snapshot = await db.collection("sightings").get();
-
       if (snapshot.empty) {
-        console.log("データが存在しません。処理を終了します。");
+        console.log("データが存在しません。");
         return;
       }
 
-      // =========================================================
-      // 2. データを CSV 形式に変換する
-      // =========================================================
-      // 仕様書 4.1 に従い、ヘッダー行を作成
-      let csvContent = "latitude,longitude,comment,sightedAt\n";
+      // CSV配列
+      const rows = [];
+
+      // ★ヘッダー: 5列構成にします (ローカル成功パターン)
+      // latitude, longitude, sightedAt, comment, link
+      rows.push("latitude,longitude,sightedAt,comment,link");
 
       snapshot.forEach((doc) => {
         const data = doc.data();
-
-        // 各フィールドの取得
         const lat = data.latitude;
         const lon = data.longitude;
-        // CSVフォーマットを壊さないよう、改行やカンマを除去
-        const comment = (data.comment || "").replace(/[\n,]/g, " ");
 
-        // 日時の整形 (FirestoreのTimestamp型を日付文字列に変換)
-        let dateStr = "";
+        if (typeof lat !== "number" || typeof lon !== "number") return;
+
+        // コメント整形
+        let comment = (data.comment || "").replace(/[\r\n,]/g, " ").trim();
+        if (!comment) comment = "-";
+
+        // 日時生成
+        let d;
         if (data.sightedAt && data.sightedAt.toDate) {
-          dateStr = data.sightedAt.toDate().toLocaleString("ja-JP");
+          d = data.sightedAt.toDate();
         } else {
-          dateStr = new Date().toLocaleString("ja-JP");
+          d = new Date();
         }
+        const jst = new Date(d.getTime() + 9 * 60 * 60 * 1000);
+        const yyyy = jst.getUTCFullYear();
+        const mm = ("0" + (jst.getUTCMonth() + 1)).slice(-2);
+        const dd = ("0" + jst.getUTCDate()).slice(-2);
+        const HH = ("0" + jst.getUTCHours()).slice(-2);
+        const MM = ("0" + jst.getUTCMinutes()).slice(-2);
+        const SS = ("0" + jst.getUTCSeconds()).slice(-2);
+        const dateStr = `${yyyy}/${mm}/${dd} ${HH}:${MM}:${SS}`;
 
-        // 行を追加
-        csvContent += `${lat},${lon},${comment},${dateStr}\n`;
+        // ★データ行: 最後にダミーリンク "#" を追加
+        rows.push(`${lat},${lon},${dateStr},${comment},#`);
       });
 
-      console.log("CSVデータの作成完了");
-      // デバッグ用: 作成されたCSVの中身をログに出しておく（調査に役立ちます）
+      // 配列を結合 (BOMなし)
+      const csvContent = rows.join("\r\n");
+
+      console.log("生成CSV:");
       console.log(csvContent);
 
-      // =========================================================
-      // 3. 外部API (SVGMapTools) へ CSV を送信して SVG を取得する
-      // =========================================================
-      // 仕様書 4. SVGMapTools API の仕様 に準拠
+      // APIへ送信
       const apiUrl =
         "https://svgmaptools-api-74174609992.us-west1.run.app/shape2svgmap";
-
       const form = new FormData();
-      // API仕様に従い、'csv' というキーでファイルデータを送信
-      form.append("csv", Buffer.from(csvContent), {
+      form.append("csv", Buffer.from(csvContent, "utf-8"), {
         filename: "data.csv",
         contentType: "text/csv",
       });
 
-      console.log("APIへリクエストを送信中...");
+      const formLength = await new Promise((resolve, reject) => {
+        form.getLength((err, length) => {
+          if (err) reject(err);
+          else resolve(length);
+        });
+      });
 
-      // POSTリクエスト送信
+      console.log(`送信中 (Length: ${formLength})...`);
+
       const apiResponse = await axios.post(apiUrl, form, {
-        headers: {
-          ...form.getHeaders(),
-        },
-        responseType: "text", // SVGテキストを受け取る
+        headers: { ...form.getHeaders(), "Content-Length": formLength },
+        responseType: "text",
       });
 
-      const svgData = apiResponse.data;
-      console.log("SVGデータの生成に成功しました。");
+      console.log("SVG生成成功 (サイズ: " + apiResponse.data.length + ")");
 
-      // =========================================================
-      // 4. 生成された SVG を Cloud Storage へアップロードする
-      // =========================================================
-      // 保存先バケットを取得
       const bucket = storage.bucket();
-      // 保存ファイル名: layer_sightings.svg
       const file = bucket.file("layer_sightings.svg");
-
-      await file.save(svgData, {
+      await file.save(apiResponse.data, {
         contentType: "image/svg+xml",
-        metadata: {
-          // ブラウザ等でのキャッシュを制御（頻繁に更新されるため短めに）
-          cacheControl: "public, max-age=60",
-        },
+        metadata: { cacheControl: "public, max-age=60" },
       });
 
-      console.log(
-        "Cloud Storage へのアップロードが完了しました: layer_sightings.svg"
-      );
+      console.log("保存完了");
     } catch (error) {
-      console.error("エラーが発生しました:", error.message);
+      console.error("エラー:", error.message);
       if (error.response) {
-        console.error("APIステータス:", error.response.status);
         console.error("APIレスポンス:", error.response.data);
       }
     }
