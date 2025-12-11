@@ -4,4 +4,6 @@ Based on [SVGMap](https://www.svgmap.org/).
 
 ## 使用データ
 
-クマアイコンデータ： [ICOOON MONO](https://icooon-mono.com/about-icoon-mono/) 様
+Map data: [OpenStreetMap](https://www.openstreetmap.org/copyright)
+
+Bear icon data： [ICOOON MONO](https://icooon-mono.com/about-icoon-mono/)

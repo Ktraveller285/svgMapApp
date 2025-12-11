@@ -1,12 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:go="http://purl.org/svgmap/profile" viewBox="123 -46 22 22">
   <globalCoordinateSystem srsName="http://purl.org/crs/84" transform="matrix(1.0,0.0,0.0,-1.0,0.0,0.0)"/>
   <!-- Basemap Layers -->
-  <animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/dynamicWMTS.svg" title="sentinel2_2018_WMTS" class="basemap switch" visibility="hidden"/>
-  <animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/dynamicDenshiKokudo2016.svg#map=ort" title="DenshiKokudo:orthoPhoto" class="basemap switch" visibility="hidden"/>
-  <animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/dynamicDenshiKokudo2016.svg#map=pale" title="DenshiKokudo:淡色" class="basemap switch" visibility="hidden"/>
-  <animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/dynamicDenshiKokudo2016.svg#map=relief" title="DenshiKokudo:relief" class="basemap switch" visibility="hidden"/>
-  <animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/dynamicDenshiKokudo2016.svg" title="DenshiKokudo" class="basemap switch" visibility="hidden"/>
-  <animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/osmTileProviders/osmtp.svg" title="OpenStreetMap Etc" class="basemap switch" visibility="hidden"/>
+  <!-- <animation x="-30000" y="-30000" width="60000" height="60000" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/dynamicWMTS.svg" title="sentinel2_2018_WMTS" class="basemap switch" visibility="hidden"/> -->
   <animation x="-300" y="-300" width="600" height="600" xlink:href="https://svgmap.github.io/svgmapAppLayers/basemaps/dynamicOSM_r11.svg" title="OpenStreetMap(Global)" class="basemap switch" visibility="visible"/>
   <!-- 熊目撃情報 -->
   <animation title="熊目撃情報" xlink:href="https://firebasestorage.googleapis.com/v0/b/denlabo-svgmap-exp.firebasestorage.app/o/layer_sightings.svg?alt=media" class="熊目撃情報" x="-30000" y="-30000" width="60000" height="60000" visibility="visible"/>
