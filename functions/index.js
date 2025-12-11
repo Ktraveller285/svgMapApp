@@ -12,7 +12,7 @@ const storage = getStorage();
 exports.generateMapLayer = onDocumentCreated(
   "sightings/{docId}",
   async (event) => {
-    console.log("SVG生成処理を開始します (ピン画像→赤丸置換版)");
+    console.log("SVG生成処理を開始します (32x32画像ピン版)");
 
     try {
       const snapshot = await db.collection("sightings").get();
@@ -78,21 +78,26 @@ exports.generateMapLayer = onDocumentCreated(
       // ★★★ ここでSVGの中身を書き換えます ★★★
       let svgData = apiResponse.data;
 
-      // <image ... mappin.png ... /> というタグを全て探し、
-      // <circle ... /> (赤い丸) に置換します。
-      // ※ 半径(r)は地図の縮尺に合わせて調整が必要
+      // ピン画像のURL
+      const rawUrl =
+        "https://firebasestorage.googleapis.com/v0/b/denlabo-svgmap-exp.firebasestorage.app/o/mappin.png?alt=media";
+      const pinUrl = rawUrl.replace(/&/g, "&amp;");
+
+      // 画像タグに置換 (32x32 に合わせて調整)
+      // width="32" height="32"
+      // x="-16" (中心合わせ)
+      // y="-32" (底辺合わせ：画像が座標の上に立つようにする)
       svgData = svgData.replace(
         /<image xlink:href="mappin.*?"[^>]*?>/g,
-        '<circle cx="0" cy="0" r="5" fill="red" stroke="white" stroke-width="2" />'
+        `<image xlink:href="${pinUrl}" width="32" height="32" x="-16" y="-32" preserveAspectRatio="none" pointer-events="all" cursor="pointer" />`
       );
 
-      console.log("SVG内の画像を赤丸に置換しました");
+      console.log("SVG内の画像を32pxピンに置換しました");
 
       // 保存
       const bucket = storage.bucket();
       const file = bucket.file("layer_sightings.svg");
       await file.save(svgData, {
-        // 書き換えた svgData を保存
         contentType: "image/svg+xml",
         metadata: { cacheControl: "public, max-age=60" },
       });
