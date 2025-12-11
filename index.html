@@ -43,6 +43,8 @@
     }
   </script>
 
+  <link rel="stylesheet" href="css/form_style.css" />
+
   <script src="js/customShowPoiProperty.js"></script>
 
   <body bgcolor="#ffffff" style="overflow: hidden">
@@ -186,5 +188,63 @@
         "
       ></div>
     </div>
+
+    <button id="btn-open-post">＋ 熊目撃情報を登録</button>
+
+    <div id="post-modal">
+      <div class="modal-content">
+        <h3>目撃情報を投稿</h3>
+
+        <div class="form-group">
+          <label>緯度（自動入力）</label>
+          <input
+            type="text"
+            id="input-lat"
+            readonly
+            style="background-color: #f0f0f0"
+          />
+        </div>
+        <div class="form-group">
+          <label>経度（自動入力）</label>
+          <input
+            type="text"
+            id="input-lon"
+            readonly
+            style="background-color: #f0f0f0"
+          />
+        </div>
+        <div class="form-group">
+          <label>目撃日時（必須）</label>
+          <input
+            type="datetime-local"
+            id="input-date"
+            style="background-color: #f0f0f0"
+          />
+        </div>
+        <div class="form-group">
+          <label>コメント（状況の詳細など）</label>
+          <textarea id="input-comment" rows="3"></textarea>
+        </div>
+
+        <div style="text-align: right">
+          <button id="btn-cancel">キャンセル</button>
+
+          <button
+            id="btn-submit"
+            style="
+              background-color: #d9534f;
+              color: white;
+              border: none;
+              padding: 5px 15px;
+              border-radius: 4px;
+            "
+          >
+            登録
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="js/form.js"></script>
   </body>
 </html>
