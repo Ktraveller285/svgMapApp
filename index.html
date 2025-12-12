@@ -194,54 +194,113 @@
 
     <div id="post-modal">
       <div class="modal-content">
-        <h3>目撃情報を投稿</h3>
-
-        <div class="form-group">
-          <label>緯度（自動入力）</label>
-          <input
-            type="text"
-            id="input-lat"
-            readonly
-            style="background-color: #f0f0f0"
-          />
-        </div>
-        <div class="form-group">
-          <label>経度（自動入力）</label>
-          <input
-            type="text"
-            id="input-lon"
-            readonly
-            style="background-color: #f0f0f0"
-          />
-        </div>
-        <div class="form-group">
-          <label>目撃日時（必須）</label>
-          <input
-            type="datetime-local"
-            id="input-date"
-            style="background-color: #f0f0f0"
-          />
-        </div>
-        <div class="form-group">
-          <label>コメント（状況の詳細など）</label>
-          <textarea id="input-comment" rows="3"></textarea>
-        </div>
-
-        <div style="text-align: right">
-          <button id="btn-cancel">キャンセル</button>
-
+        <div id="panel-login" style="text-align: center; padding: 20px 0">
+          <h3>Google アカウントでのログインが必要です</h3>
           <button
-            id="btn-submit"
+            id="btn-login-google"
             style="
-              background-color: #d9534f;
+              background-color: #4285f4;
               color: white;
               border: none;
-              padding: 5px 15px;
+              padding: 10px 20px;
               border-radius: 4px;
+              font-size: 16px;
+              cursor: pointer;
+              display: inline-flex;
+              align-items: center;
             "
           >
-            登録
+            Googleでログイン
           </button>
+
+          <div style="margin-top: 20px">
+            <button
+              id="btn-login-cancel"
+              style="
+                border: none;
+                background: none;
+                text-decoration: underline;
+                cursor: pointer;
+              "
+            >
+              キャンセル
+            </button>
+          </div>
+        </div>
+
+        <div id="panel-form" style="display: none">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 15px;
+            "
+          >
+            <h3 style="margin: 0">目撃情報を投稿</h3>
+            <button id="btn-logout" style="font-size: 0.8em; cursor: pointer">
+              ログアウト
+            </button>
+          </div>
+
+          <div
+            style="
+              font-size: 0.8em;
+              color: #555;
+              margin-bottom: 10px;
+              text-align: right;
+            "
+          >
+            ログイン中: <span id="user-display-name"></span>
+          </div>
+
+          <div class="form-group">
+            <label>緯度（自動入力）</label>
+            <input
+              type="text"
+              id="input-lat"
+              readonly
+              style="background-color: #f0f0f0"
+            />
+          </div>
+          <div class="form-group">
+            <label>経度（自動入力）</label>
+            <input
+              type="text"
+              id="input-lon"
+              readonly
+              style="background-color: #f0f0f0"
+            />
+          </div>
+          <div class="form-group">
+            <label>目撃日時（必須）</label>
+            <input
+              type="datetime-local"
+              id="input-date"
+              style="background-color: #f0f0f0"
+            />
+          </div>
+          <div class="form-group">
+            <label>コメント（状況の詳細など）</label>
+            <textarea id="input-comment" rows="3"></textarea>
+          </div>
+
+          <div style="text-align: right">
+            <button id="btn-cancel">キャンセル</button>
+
+            <button
+              id="btn-submit"
+              style="
+                background-color: #d9534f;
+                color: white;
+                border: none;
+                padding: 5px 15px;
+                border-radius: 4px;
+              "
+            >
+              登録
+            </button>
+          </div>
         </div>
       </div>
     </div>

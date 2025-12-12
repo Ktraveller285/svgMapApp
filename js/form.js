@@ -1,4 +1,5 @@
 // 1. Firebase SDK の読み込み
+// Authentication機能を追加でインポートしています
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
 import {
   getFirestore,
@@ -6,8 +7,15 @@ import {
   addDoc,
   serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+import {
+  getAuth,
+  onAuthStateChanged,
+  signInWithPopup,
+  GoogleAuthProvider,
+  signOut,
+} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
-// Firebase設定
+// Firebase設定 (※ご自身の元の設定を使用してください)
 const firebaseConfig = {
   apiKey: "AIzaSyBAJjnZj-TVSD7lzLjJGPnbzHcSdJ5D4dk",
   authDomain: "denlabo-svgmap-exp.firebaseapp.com",
@@ -20,8 +28,75 @@ const firebaseConfig = {
 // Firebase アプリを初期化
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app); // Authの初期化
 
-// 2. 登録ボタンを押したときの処理（座標取得＆画面表示）
+// ========================================================
+// A. 認証状態の監視と画面切り替え
+// ========================================================
+onAuthStateChanged(auth, (user) => {
+  const panelLogin = document.getElementById("panel-login");
+  const panelForm = document.getElementById("panel-form");
+  const userNameSpan = document.getElementById("user-display-name");
+
+  // 要素が存在しない場合のエラー回避
+  if (!panelLogin || !panelForm) return;
+
+  if (user) {
+    // === ログイン中 ===
+    panelLogin.style.display = "none";
+    panelForm.style.display = "block";
+
+    // ユーザー名表示（もしHTMLに要素があれば）
+    if (userNameSpan) {
+      userNameSpan.textContent = user.displayName || "ユーザー";
+    }
+  } else {
+    // === 未ログイン ===
+    panelLogin.style.display = "block";
+    panelForm.style.display = "none";
+  }
+});
+
+// ========================================================
+// B. 認証関連ボタンのイベント
+// ========================================================
+
+// Googleログインボタン
+const btnLoginGoogle = document.getElementById("btn-login-google");
+if (btnLoginGoogle) {
+  btnLoginGoogle.addEventListener("click", async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+      // 成功すると onAuthStateChanged が動いて画面が切り替わります
+    } catch (error) {
+      console.error("Login Error:", error);
+      alert("ログインに失敗しました: " + error.message);
+    }
+  });
+}
+
+// ログアウトボタン
+const btnLogout = document.getElementById("btn-logout");
+if (btnLogout) {
+  btnLogout.addEventListener("click", () => {
+    signOut(auth).then(() => {
+      alert("ログアウトしました");
+    });
+  });
+}
+
+// ログインパネル側のキャンセルボタン
+const btnLoginCancel = document.getElementById("btn-login-cancel");
+if (btnLoginCancel) {
+  btnLoginCancel.addEventListener("click", function () {
+    document.getElementById("post-modal").style.display = "none";
+  });
+}
+
+// ========================================================
+// C. 既存のモーダル表示処理（座標取得など）
+// ========================================================
 document.getElementById("btn-open-post").addEventListener("click", function () {
   const centerPosElement = document.querySelector("#centerPos");
   const centerPosText = centerPosElement ? centerPosElement.innerText : "";
@@ -71,18 +146,30 @@ document.getElementById("btn-open-post").addEventListener("click", function () {
   document.getElementById("input-date").value = now.toISOString().slice(0, 16);
 
   // 画面を表示
+  // ※ここで中身が「ログイン画面」か「フォーム」かは、onAuthStateChangedによって自動制御されます
   document.getElementById("post-modal").style.display = "flex";
 });
 
-// 3. キャンセルボタン
+// ========================================================
+// D. キャンセル＆登録ボタン処理
+// ========================================================
+
+// キャンセルボタン
 document.getElementById("btn-cancel").addEventListener("click", function () {
   document.getElementById("post-modal").style.display = "none";
 });
 
-// 4. 登録するボタン（Firestoreへの送信処理）
+// 登録するボタン（Firestoreへの送信処理）
 document
   .getElementById("btn-submit")
   .addEventListener("click", async function () {
+    // ★追加: ログインチェック
+    const user = auth.currentUser;
+    if (!user) {
+      alert("投稿するにはログインが必要です。");
+      return;
+    }
+
     // 入力値を取得
     const latStr = document.getElementById("input-lat").value;
     const lonStr = document.getElementById("input-lon").value;
@@ -108,6 +195,7 @@ document
         sightedAt: new Date(dateStr), // Timestamp型として保存
         comment: comment,
         createdAt: serverTimestamp(),
+        userId: user.uid, // ★追加: ユーザーIDを記録
       });
 
       // 成功メッセージ
