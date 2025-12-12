@@ -195,7 +195,10 @@
     <div id="post-modal">
       <div class="modal-content">
         <div id="panel-login" style="text-align: center; padding: 20px 0">
-          <h3>Google アカウントでのログインが必要です</h3>
+          <p>
+            目撃情報を投稿するには<br />
+            Google アカウントでログインしてください<br />
+          </p>
           <button
             id="btn-login-google"
             style="
@@ -210,9 +213,13 @@
               align-items: center;
             "
           >
-            Googleでログイン
+            Googleアカウントでログイン
           </button>
-
+          <p>
+            <small>
+              いたずら防止のため、一定期間、アカウントのメールアドレスがサーバに保存されます。
+            </small>
+          </p>
           <div style="margin-top: 20px">
             <button
               id="btn-login-cancel"
@@ -238,9 +245,6 @@
             "
           >
             <h3 style="margin: 0">目撃情報を投稿</h3>
-            <button id="btn-logout" style="font-size: 0.8em; cursor: pointer">
-              ログアウト
-            </button>
           </div>
 
           <div
@@ -285,21 +289,40 @@
             <textarea id="input-comment" rows="3"></textarea>
           </div>
 
-          <div style="text-align: right">
-            <button id="btn-cancel">キャンセル</button>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-top: 20px;
+            "
+          >
+            <div>
+              <button id="btn-logout" style="padding: 5px 10px">
+                ログアウト
+              </button>
+            </div>
 
-            <button
-              id="btn-submit"
-              style="
-                background-color: #d9534f;
-                color: white;
-                border: none;
-                padding: 5px 15px;
-                border-radius: 4px;
-              "
-            >
-              登録
-            </button>
+            <div>
+              <button
+                id="btn-cancel"
+                style="padding: 5px 10px; margin-right: 10px"
+              >
+                キャンセル
+              </button>
+              <button
+                id="btn-submit"
+                style="
+                  background-color: #d9534f;
+                  color: white;
+                  border: none;
+                  padding: 5px 15px;
+                  border-radius: 4px;
+                "
+              >
+                登録
+              </button>
+            </div>
           </div>
         </div>
       </div>
